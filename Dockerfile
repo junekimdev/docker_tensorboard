@@ -10,8 +10,8 @@ RUN set -eux \
   py3-numpy \
   && pip3 install tensorboard
 
-VOLUME /output
+VOLUME /data
 
 EXPOSE 8888
 
-CMD ["/bin/sh", "-c","python3 -m tensorboard.main --logdir=/output --port 8888 --bind_all"]
+CMD ["/bin/sh", "-c","python3 -m tensorboard.main --logdir=/data --port 8888 --bind_all"]
